@@ -2,7 +2,7 @@
   "name": "react-native-and-expo-code-snippets",
   "displayName": "React Native and Expo Code Snippets",
   "description": "Boost your productivity while building mobile applications. No more jumping from your IDE to documentation to find the appropriate props for the components you love and use most",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.54.0"
   },
