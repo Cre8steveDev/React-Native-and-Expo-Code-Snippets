@@ -48,18 +48,5 @@
     "react-native snippets",
     "mobile development snippets",
     "react expo snippets"
-  ],
-  "activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:javascriptreact",
-    "onLanguage:typescript",
-    "onLanguage:typescriptreact"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "typescript": "^4.0.0",
-    "vscode": "^1.1.36",
-    "@types/node": "^14.0.0",
-    "@types/vscode": "^1.54.0"
-  }
+  ]
 }
