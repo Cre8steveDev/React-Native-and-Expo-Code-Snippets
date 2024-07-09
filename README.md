@@ -10,7 +10,7 @@ If like me, you like to see what's possible with any component you're using to b
 
 ## Usage
 
-![Usage Animation](https://files.fm/f/eb3wvw96br)
+![Usage Animation](https://github.com/Cre8steveDev/React-Native-and-Expo-Code-Snippets/blob/main/output.gif)
 
 ## Requirements
 
