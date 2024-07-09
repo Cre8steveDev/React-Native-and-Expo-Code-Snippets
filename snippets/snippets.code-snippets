@@ -1,0 +1,1332 @@
+{
+  "React Native Functional Component": {
+    "prefix": "_rnfc",
+    "body": [
+      "import React from 'react';",
+      "import { View, Text } from 'react-native';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <View>",
+      "      <Text>${2:Hello, World!}</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Creates a React Native functional component"
+  },
+
+  "Expo StatusBar": {
+    "prefix": "_expostatusbar",
+    "body": [
+      "// Place import statement at the top of your file",
+      "//import { StatusBar } from 'expo-status-bar';",
+      "",
+      "<StatusBar style=\"${1|auto,light,dark|}\" />"
+    ],
+    "description": "Adds Expo StatusBar component"
+  },
+
+  "React Native StyleSheet": {
+    "prefix": "_rnstyle",
+    "body": [
+      "// Place import statement at the top of your file",
+      "//import { StyleSheet } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({",
+      "  ${1:container}: {",
+      "    ${2:flex: 1,}",
+      "    ${3:justifyContent: 'center',}",
+      "    ${4:alignItems: 'center',}",
+      "  },",
+      "});"
+    ],
+    "description": "Creates a React Native StyleSheet"
+  },
+
+  "React Native FlatList (All Props)": {
+    "prefix": "_rnflatlistall",
+    "body": [
+      "// Import the component from react-native at top of your file",
+      "<FlatList",
+      "  data={${1:data}}",
+      "  renderItem={({ item }) => ${2:<YourItemComponent item={item} />}}",
+      "  keyExtractor={(item) => item.id}",
+      "  extraData={${3:extraData}}",
+      "  initialNumToRender={${4:10}}",
+      "  inverted={${5|false,true|}}",
+      "  numColumns={${6:1}}",
+      "  onEndReached={${7:handleLoadMore}}",
+      "  onEndReachedThreshold={${8:0.5}}",
+      "  onRefresh={${9:handleRefresh}}",
+      "  refreshing={${10:isRefreshing}}",
+      "  ListHeaderComponent={${11:<YourHeaderComponent />}}",
+      "  ListFooterComponent={${12:<YourFooterComponent />}}",
+      "  ListEmptyComponent={${13:<YourEmptyComponent />}}",
+      "  ItemSeparatorComponent={${14:<YourSeparatorComponent />}}",
+      "  contentContainerStyle={${15:styles.contentContainer}}",
+      "  horizontal={${16|false,true|}}",
+      "  initialScrollIndex={${17:0}}",
+      "  onViewableItemsChanged={${18:handleViewableItemsChanged}}",
+      "  viewabilityConfig={{",
+      "    itemVisiblePercentThreshold: 50",
+      "  }}",
+      "  getItemLayout={(data, index) => ({",
+      "    length: ${19:ITEM_HEIGHT},",
+      "    offset: ${19:ITEM_HEIGHT} * index,",
+      "    index,",
+      "  })}",
+      "/>"
+    ],
+    "description": "React Native FlatList component with all possible props"
+  },
+
+  "React Native FlatList (Basic Props)": {
+    "prefix": "_rnflatlistbasic",
+    "body": [
+      "<FlatList",
+      "  data={${1:data}}",
+      "  renderItem={({ item }) => ${2:<YourItemComponent item={item} />}}",
+      "  keyExtractor={(item) => item.id}",
+      "  onEndReached={${3:handleLoadMore}}",
+      "  onEndReachedThreshold={${4:0.5}}",
+      "  onRefresh={${5:handleRefresh}}",
+      "  refreshing={${6:isRefreshing}}",
+      "/>"
+    ],
+    "description": "React Native FlatList component with basic props"
+  },
+
+  "Expo Image (All Props)": {
+    "prefix": "_expoimageall",
+    "body": [
+      "import { Image } from 'expo-image';",
+      "",
+      "<Image",
+      "  source={{ uri: '${1:https://example.com/image.jpg}' }}",
+      "  style={{ width: ${2:200}, height: ${3:200} }}",
+      "  placeholder={${4|null,'blur'|}${5:BLUR_HASH}}",
+      "  contentFit=\"${6|cover,contain,fill,inside,outside|}\"",
+      "  transition={${7:1000}}",
+      "  contentPosition={{ top: ${8:0}, left: ${9:0} }}",
+      "  alt=\"${10:Image description}\"",
+      "  tintColor=\"${11:#000000}\"",
+      "  blurRadius={${12:0}}",
+      "  cachePolicy=\"${13|memory,disk,memory-disk|}\"",
+      "  onLoad={() => ${14:console.log('Image loaded')}}",
+      "  onError={(error) => ${15:console.error('Image failed to load:', error)}}",
+      "  recyclingKey=\"${16:uniqueKey}\"",
+      "  accessible={${17|true,false|}}",
+      "  accessibilityLabel=\"${18:Image accessibility description}\"",
+      "/>"
+    ],
+    "description": "Expo Image component with all possible props"
+  },
+
+  "Expo Image (Basic Props)": {
+    "prefix": "_expoimagebasic",
+    "body": [
+      "import { Image } from 'expo-image';",
+      "",
+      "<Image",
+      "  source={{ uri: '${1:https://example.com/image.jpg}' }}",
+      "  style={{ width: ${2:200}, height: ${3:200} }}",
+      "  contentFit=\"${4|cover,contain,fill,inside,outside|}\"",
+      "  alt=\"${5:Image description}\"",
+      "/>"
+    ],
+    "description": "Expo Image component with basic props"
+  },
+
+  "React Native ScrollView (All Props)": {
+    "prefix": "_rnscrollviewall",
+    "body": [
+      "import { ScrollView, RefreshControl } from 'react-native';",
+      "",
+      "<ScrollView",
+      "  contentContainerStyle={${1:styles.contentContainer}}",
+      "  horizontal={${2|false,true|}}",
+      "  showsHorizontalScrollIndicator={${3|true,false|}}",
+      "  showsVerticalScrollIndicator={${4|true,false|}}",
+      "  keyboardDismissMode=\"${5|none,on-drag,interactive|}\"",
+      "  keyboardShouldPersistTaps=\"${6|never,always,handled|}\"",
+      "  onContentSizeChange={(contentWidth, contentHeight) => {",
+      "    ${7:// Handle content size change}",
+      "  }}",
+      "  onScroll={(event) => {",
+      "    ${8:// Handle scroll event}",
+      "  }}",
+      "  refreshControl={",
+      "    <RefreshControl",
+      "      refreshing={${9:isRefreshing}}",
+      "      onRefresh={${10:handleRefresh}}",
+      "    />",
+      "  }",
+      "  scrollEnabled={${11|true,false|}}",
+      "  stickyHeaderIndices={[${12:0}]}",
+      "  decelerationRate=\"${13|normal,fast|}\"",
+      "  pagingEnabled={${14|false,true|}}",
+      "  bounces={${15|true,false|}}",
+      "  bouncesZoom={${16|true,false|}}",
+      "  alwaysBounceHorizontal={${17|false,true|}}",
+      "  alwaysBounceVertical={${18|false,true|}}",
+      "  maximumZoomScale={${19:1.0}}",
+      "  minimumZoomScale={${20:1.0}}",
+      "  scrollEventThrottle={${21:16}}",
+      "  scrollIndicatorInsets={{ top: ${22:0}, left: ${23:0}, bottom: ${24:0}, right: ${25:0} }}",
+      ">",
+      "  ${26:// Your content here}",
+      "</ScrollView>"
+    ],
+    "description": "React Native Scroll View with Detailed props"
+  },
+
+  "React Native ScrollView (Basic Props)": {
+    "prefix": "_rnscrollviewbasic",
+    "body": [
+      "import { ScrollView } from 'react-native';",
+      "",
+      "<ScrollView",
+      "  horizontal={${2|false,true|}}",
+      "  showsHorizontalScrollIndicator={${3|true,false|}}",
+      "  showsVerticalScrollIndicator={${4|true,false|}}",
+      "  keyboardDismissMode=\"${5|none,on-drag,interactive|}\"",
+      "  contentContainerStyle={${1:styles.contentContainer}}",
+      "  showsVerticalScrollIndicator={${2|true,false|}}",
+      "  keyboardShouldPersistTaps=\"${3|never,always,handled|}\"",
+      ">",
+      "  ${4:// Your content here}",
+      "</ScrollView>"
+    ],
+    "description": "React Native Scroll View with Basic Props"
+  },
+
+  "React Native KeyboardAvoidingView (All Props)": {
+    "prefix": "_rnkeyboardavoidingviewall",
+    "body": [
+      "import { KeyboardAvoidingView, Platform } from 'react-native';",
+      "",
+      "<KeyboardAvoidingView",
+      "  behavior={Platform.OS === 'ios' ? '${1|padding,height,position|}' : '${2|height,position,padding|}'}",
+      "  style={${3:styles.container}}",
+      "  contentContainerStyle={${4:styles.content}}",
+      "  enabled={${5|true,false|}}",
+      "  keyboardVerticalOffset={${6:0}}",
+      ">",
+      "  ${7:// Your content here}",
+      "</KeyboardAvoidingView>"
+    ]
+  },
+
+  "React Native KeyboardAvoidingView (Basic Props)": {
+    "prefix": "_rnkeyboardavoidingviewbasic",
+    "body": [
+      "import { KeyboardAvoidingView, Platform } from 'react-native';",
+      "",
+      "<KeyboardAvoidingView",
+      "  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}",
+      "  style={${1:styles.container}}",
+      ">",
+      "  ${2:// Your content here}",
+      "</KeyboardAvoidingView>"
+    ]
+  },
+
+  "Expo Video (All Props)": {
+    "prefix": "_expovideoall",
+    "body": [
+      "// Instal the expo-av package if you haven't",
+      "import { Video, ResizeMode } from 'expo-av';",
+      "",
+      "<Video",
+      "  source={{ uri: '${1:http://example.net/big_buck_bunny.mp4}' }}",
+      "  style={{ width: ${2:300}, height: ${3:200} }}",
+      "  useNativeControls",
+      "  resizeMode={ResizeMode.${4|CONTAIN,COVER,STRETCH|}",
+      "  isLooping",
+      "  onPlaybackStatusUpdate={status => setStatus(() => status)}",
+      "  volume={${5:1.0}}",
+      "  isMuted={${6|false,true|}",
+      "  shouldPlay={${7|false,true|}",
+      "  rate={${8:1.0}}",
+      "  posterSource={{ uri: '${9:https://example.com/poster.png}' }}",
+      "  usePoster={${10|false,true|}",
+      "  posterStyle={{ ${11:resizeMode: 'cover'} }}",
+      "  audioStyle={{ ${12:} }}",
+      "  videoStyle={{ ${13:} }}",
+      "  onLoad={() => ${14:console.log('Video loaded')}}",
+      "  onError={(error) => ${15:console.error('Video failed to load:', error)}}",
+      "  onReadyForDisplay={() => ${16:console.log('Video ready for display')}}",
+      "  onFullscreenUpdate={(status) => ${17:console.log('Fullscreen status:', status)}}",
+      "/>"
+    ],
+    "description": ""
+  },
+
+  "Expo Video (Basic Props)": {
+    "prefix": "_expovideobasic",
+    "body": [
+      "// Instal the expo-av package if you haven't",
+      "import { Video, ResizeMode } from 'expo-av';",
+      "",
+      "<Video",
+      "  source={{ uri: '${1:http://example.net/big_buck_bunny.mp4}' }}",
+      "  style={{ width: ${2:300}, height: ${3:200} }}",
+      "  useNativeControls",
+      "  resizeMode={ResizeMode.CONTAIN}",
+      "  isLooping",
+      "/>"
+    ],
+    "description": ""
+  },
+
+  "React Native ImageBackground (All Props)": {
+    "prefix": "_rnimagebackgroundall",
+    "body": [
+      "import { ImageBackground } from 'react-native';",
+      "",
+      "<ImageBackground",
+      "  source={{ uri: '${1:https://example.com/image.jpg}' }}",
+      "  style={{ width: '${2:100%}', height: ${3:200} }}",
+      "  imageStyle={{ ${4:opacity: 0.5} }}",
+      "  resizeMode=\"${5|cover,contain,stretch,repeat,center|}\"",
+      "  blurRadius={${6:0}}",
+      "  borderRadius={${7:0}}",
+      "  fadeDuration={${8:300}}",
+      "  onLoad={() => ${9:console.log('Image loaded')}}",
+      "  onError={(error) => ${10:console.error('Image failed to load:', error)}}",
+      "  accessibilityLabel=\"${11:Image background description}\"",
+      "  testID=\"${12:image-background-test-id}\"",
+      ">",
+      "  ${13:// Your content here}",
+      "</ImageBackground>"
+    ]
+  },
+
+  "React Native ImageBackground (Basic Props)": {
+    "prefix": "_rnimagebackgroundbasic",
+    "body": [
+      "import { ImageBackground } from 'react-native';",
+      "",
+      "<ImageBackground",
+      "  source={{ uri: '${1:https://example.com/image.jpg}' }}",
+      "  style={{ width: '${2:100%}', height: ${3:200} }}",
+      "  resizeMode=\"${4|cover,contain,stretch,repeat,center|}\"",
+      ">",
+      "  ${5:// Your content here}",
+      "</ImageBackground>"
+    ]
+  },
+
+  "React Native Context Creation": {
+    "prefix": "_rncontext",
+    "body": [
+      "import React, { createContext, useState, useContext } from 'react';",
+      "",
+      "const ${1:My}Context = createContext();",
+      "",
+      "export const ${1:My}Provider = ({ children }) => {",
+      "  const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = useState(${3:initialValue});",
+      "",
+      "  const value = {",
+      "    ${2:state},",
+      "    set${2/(.*)/${1:/capitalize}/},",
+      "    ${4:// Add other values or functions here}",
+      "  };",
+      "",
+      "  return (",
+      "    <${1:My}Context.Provider value={value}>",
+      "      {children}",
+      "    </${1:My}Context.Provider>",
+      "  );",
+      "};",
+      "",
+      "export const use${1:My}Context = () => {",
+      "  const context = useContext(${1:My}Context);",
+      "  if (context === undefined) {",
+      "    throw new Error('use${1:My}Context must be used within a ${1:My}Provider');",
+      "  }",
+      "  return context;",
+      "}"
+    ]
+  },
+
+  "React Native Context Usage": {
+    "prefix": "_rnusecontext",
+    "body": [
+      "import { use${1:My}Context } from '${2:./path/to/context}';",
+      "",
+      "const ${3:Component} = () => {",
+      "  const { ${4:state}, ${5:setState} } = use${1:My}Context();",
+      "",
+      "  return (",
+      "    ${6:// Use context values here}",
+      "  );",
+      "};"
+    ]
+  },
+
+  "React Native Wrap Component with Context Provider": {
+    "prefix": "_rnwrapcontext",
+    "body": [
+      "import { ${1:My}Provider } from '${2:./path/to/context}';",
+      "",
+      "const App = () => {",
+      "  return (",
+      "    <${1:My}Provider>",
+      "      ${3:// Your app components here}",
+      "    </${1:My}Provider>",
+      "  );",
+      "};"
+    ]
+  },
+  "Expo LinearGradient (All Props)": {
+    "prefix": "_lineargradientall",
+    "body": [
+      "// expo install expo-linear-gradient",
+      "import { LinearGradient } from 'expo-linear-gradient';",
+      "",
+      "<LinearGradient",
+      "  colors={['${1:#4c669f}', '${2:#3b5998}', '${3:#192f6a}']}",
+      "  start={{ x: ${4:0}, y: ${5:0} }}",
+      "  end={{ x: ${6:1}, y: ${7:1} }}",
+      "  locations={[${8:0}, ${9:0.5}, ${10:1}]}",
+      "  style={{",
+      "    flex: ${11:1},",
+      "    width: ${12:'100%'},",
+      "    height: ${13:200},",
+      "    ${14:// Add more styles as needed}",
+      "  }}",
+      ">",
+      "  ${15:// Your content here}",
+      "</LinearGradient>"
+    ]
+  },
+
+  "Expo LinearGradient (Basic Props)": {
+    "prefix": "_lineargradientbasic",
+    "body": [
+      "// expo install expo-linear-gradient",
+      "import { LinearGradient } from 'expo-linear-gradient';",
+      "",
+      "<LinearGradient",
+      "  colors={['${1:#4c669f}', '${2:#3b5998}', '${3:#192f6a}']}",
+      "  style={{ flex: 1 }}",
+      ">",
+      "  ${4:// Your content here}",
+      "</LinearGradient>"
+    ]
+  },
+  "React Native SafeAreaView (All Props)": {
+    "prefix": "_rnsafeareaviewall",
+    "body": [
+      "// Import the component from react-native-safe-area-context at the top of your file",
+      "<SafeAreaView",
+      "  mode={${1|'padding','margin'|}}",
+      "  edges={${2|['top', 'right', 'bottom', 'left'],['top'],['bottom'],['right'],['left']|}}",
+      "  style={${3:styles.container}}",
+      "  onInsetsChange={${4:(insets) => console.log(insets)}}",
+      ">",
+      "  ${5:Your content here}",
+      "</SafeAreaView>"
+    ],
+    "description": "React Native SafeAreaView component with all possible props"
+  },
+
+  "React Native SafeAreaView (Basic Props)": {
+    "prefix": "_rnsafeareaviewbasic",
+    "body": [
+      "<SafeAreaView style={${1:styles.container}}>",
+      "  ${2:Your content here}",
+      "</SafeAreaView>"
+    ],
+    "description": "React Native SafeAreaView component with basic props"
+  },
+  "React Native View (All Props)": {
+    "prefix": "_rnviewall",
+    "body": [
+      "<View",
+      "  style={${1:styles.container}}",
+      "  accessibilityLabel={${2:'Descriptive label'}}",
+      "  accessibilityRole={${3|'none','button','link','search','image','keyboardkey','text','adjustable','imagebutton','header','summary','alert','checkbox','combobox','menu','menubar','menuitem','progressbar','radio','radiogroup','scrollbar','spinbutton','switch','tab','tablist','timer','toolbar'|}}",
+      "  accessible={${4|true,false|}}",
+      "  hitSlop={{ top: ${5:10}, bottom: ${6:10}, left: ${7:10}, right: ${8:10} }}",
+      "  importantForAccessibility={${9|'auto','yes','no','no-hide-descendants'|}}",
+      "  nativeID={${10:'uniqueID'}}",
+      "  onLayout={${11:(event) => console.log(event.nativeEvent.layout)}}",
+      "  pointerEvents={${12|'auto','none','box-none','box-only'|}}",
+      "  removeClippedSubviews={${13|false,true|}}",
+      "  testID={${14:'testID'}}",
+      ">",
+      "  ${15:Your content here}",
+      "</View>"
+    ],
+    "description": "React Native View component with all possible props"
+  },
+
+  "React Native View (Basic Props)": {
+    "prefix": "_rnviewbasic",
+    "body": [
+      "<View style={${1:styles.container}}>",
+      "  ${2:Your content here}",
+      "</View>"
+    ],
+    "description": "React Native View component with basic props"
+  },
+  "React Native Text (All Props)": {
+    "prefix": "_rntextall",
+    "body": [
+      "<Text",
+      "  style={${1:styles.text}}",
+      "  allowFontScaling={${2|true,false|}",
+      "  ellipsizeMode={${3|'head','middle','tail','clip'|}}",
+      "  numberOfLines={${4:1}}",
+      "  onPress={${5:() => console.log('Text pressed')}}",
+      "  onLongPress={${6:() => console.log('Text long pressed')}}",
+      "  adjustsFontSizeToFit={${7|false,true|}}",
+      "  minimumFontScale={${8:0.5}}",
+      "  selectable={${9|false,true|}}",
+      "  suppressHighlighting={${10|false,true|}}",
+      "  testID={${11:'testID'}}",
+      "  nativeID={${12:'uniqueID'}}",
+      "  accessibilityLabel={${13:'Descriptive label'}}",
+      "  accessibilityHint={${14:'Hint about the action'}}",
+      "  accessibilityRole={${15|'none','text','link','search','image','button','header','summary'|}}",
+      ">",
+      "  ${16:Your text here}",
+      "</Text>"
+    ],
+    "description": "React Native Text component with all possible props"
+  },
+
+  "React Native Text (Basic Props)": {
+    "prefix": "_rntextbasic",
+    "body": [
+      "<Text style={${1:styles.text}}>",
+      "  ${2:Your text here}",
+      "</Text>"
+    ],
+    "description": "React Native Text component with basic props"
+  },
+  "React Native TextInput (All Props)": {
+    "prefix": "_rntextinputall",
+    "body": [
+      "<TextInput",
+      "  style={${1:styles.input}}",
+      "  value={${2:value}}",
+      "  onChangeText={${3:(text) => setValue(text)}}",
+      "  placeholder={${4:'Enter text here'}}",
+      "  placeholderTextColor={${5:'#999'}}",
+      "  keyboardType={${6|'default','number-pad','decimal-pad','numeric','email-address','phone-pad'|}}",
+      "  secureTextEntry={${7|false,true|}}",
+      "  autoCapitalize={${8|'none','sentences','words','characters'|}}",
+      "  autoCorrect={${9|true,false|}}",
+      "  autoFocus={${10|false,true|}}",
+      "  editable={${11|true,false|}}",
+      "  maxLength={${12:100}}",
+      "  multiline={${13|false,true|}}",
+      "  numberOfLines={${14:1}}",
+      "  onBlur={${15:() => console.log('Input blurred')}}",
+      "  onFocus={${16:() => console.log('Input focused')}}",
+      "  onSubmitEditing={${17:() => console.log('Input submitted')}}",
+      "  returnKeyType={${18|'done','go','next','search','send'|}}",
+      "  selectTextOnFocus={${19|false,true|}}",
+      "  clearButtonMode={${20|'never','while-editing','unless-editing','always'|}}",
+      "  textAlign={${21|'left','center','right'|}}",
+      "  textContentType={${22|'none','URL','addressCity','addressCityAndState','addressState','countryName','creditCardNumber','emailAddress','familyName','fullStreetAddress','givenName','jobTitle','location','middleName','name','namePrefix','nameSuffix','nickname','organizationName','postalCode','streetAddressLine1','streetAddressLine2','sublocality','telephoneNumber','username','password'|}}",
+      "/>"
+    ],
+    "description": "React Native TextInput component with all possible props"
+  },
+
+  "React Native TextInput (Basic Props)": {
+    "prefix": "_rntextinputbasic",
+    "body": [
+      "<TextInput",
+      "  style={${1:styles.input}}",
+      "  value={${2:value}}",
+      "  onChangeText={${3:(text) => setValue(text)}}",
+      "  placeholder={${4:'Enter text here'}}",
+      "/>"
+    ],
+    "description": "React Native TextInput component with basic props"
+  },
+
+  "React Native TouchableOpacity (All Props)": {
+    "prefix": "_rntouchableopacityall",
+    "body": [
+      "<TouchableOpacity",
+      "  style={${1:styles.button}}",
+      "  onPress={${2:() => console.log('Pressed')}}",
+      "  onLongPress={${3:() => console.log('Long pressed')}}",
+      "  activeOpacity={${4:0.2}}",
+      "  disabled={${5|false,true|}}",
+      "  hitSlop={{ top: ${6:10}, bottom: ${7:10}, left: ${8:10}, right: ${9:10} }}",
+      "  delayLongPress={${10:500}}",
+      "  delayPressIn={${11:0}}",
+      "  delayPressOut={${12:100}}",
+      "  pressRetentionOffset={{ top: ${13:20}, left: ${14:20}, bottom: ${15:20}, right: ${16:20} }}",
+      "  accessibilityLabel={${17:'Descriptive label'}}",
+      "  accessibilityRole={${18|'button','link'|}}",
+      "  accessibilityState={{ disabled: ${19|false,true|} }}",
+      "  testID={${20:'testID'}}",
+      ">",
+      "  ${21:Your content here}",
+      "</TouchableOpacity>"
+    ],
+    "description": "React Native TouchableOpacity component with all possible props"
+  },
+
+  "React Native TouchableOpacity (Basic Props)": {
+    "prefix": "_rntouchableopacitybasic",
+    "body": [
+      "<TouchableOpacity",
+      "  style={${1:styles.button}}",
+      "  onPress={${2:() => console.log('Pressed')}}",
+      ">",
+      "  ${3:Your content here}",
+      "</TouchableOpacity>"
+    ],
+    "description": "React Native TouchableOpacity component with basic props"
+  },
+
+  "React Native TouchableHighlight (All Props)": {
+    "prefix": "_rntouchabblehighlightall",
+    "body": [
+      "<TouchableHighlight",
+      "  style={${1:styles.button}}",
+      "  onPress={${2:() => console.log('Pressed')}}",
+      "  onLongPress={${3:() => console.log('Long pressed')}}",
+      "  underlayColor={${4:'#DDDDDD'}}",
+      "  activeOpacity={${5:0.6}}",
+      "  disabled={${6|false,true|}}",
+      "  hitSlop={{ top: ${7:10}, bottom: ${8:10}, left: ${9:10}, right: ${10:10} }}",
+      "  delayLongPress={${11:500}}",
+      "  delayPressIn={${12:0}}",
+      "  delayPressOut={${13:100}}",
+      "  pressRetentionOffset={{ top: ${14:20}, left: ${15:20}, bottom: ${16:20}, right: ${17:20} }}",
+      "  accessibilityLabel={${18:'Descriptive label'}}",
+      "  accessibilityRole={${19|'button','link'|}}",
+      "  accessibilityState={{ disabled: ${20|false,true|} }}",
+      "  testID={${21:'testID'}}",
+      ">",
+      "  ${22:Your content here}",
+      "</TouchableHighlight>"
+    ],
+    "description": "React Native TouchableHighlight component with all possible props"
+  },
+
+  "React Native TouchableHighlight (Basic Props)": {
+    "prefix": "_rntouchabblehighlightbasic",
+    "body": [
+      "<TouchableHighlight",
+      "  style={${1:styles.button}}",
+      "  onPress={${2:() => console.log('Pressed')}}",
+      "  underlayColor={${3:'#DDDDDD'}}",
+      ">",
+      "  ${4:Your content here}",
+      "</TouchableHighlight>"
+    ],
+    "description": "React Native TouchableHighlight component with basic props"
+  },
+  "React Native Button (All Props)": {
+    "prefix": "_rnbuttonall",
+    "body": [
+      "<Button",
+      "  title=${1:'Button Title'}",
+      "  onPress={${2:() => console.log('Button pressed')}}",
+      "  color=${3:'#007AFF'}",
+      "  disabled={${4|false,true|}}",
+      "  accessibilityLabel=${5:'Accessibility label'}",
+      "  testID=${6:'testID'}",
+      "/>"
+    ],
+    "description": "React Native Button component with all possible props"
+  },
+
+  "React Native Button (Basic Props)": {
+    "prefix": "_rnbuttonbasic",
+    "body": [
+      "<Button",
+      "  title=${1:'Button Title'}",
+      "  onPress={${2:() => console.log('Button pressed')}}",
+      "/>"
+    ],
+    "description": "React Native Button component with basic props"
+  },
+
+  "React Native ActivityIndicator (All Props)": {
+    "prefix": "_rnactivityindicatorall",
+    "body": [
+      "<ActivityIndicator",
+      "  size={${1|'small','large'|}",
+      "  color=${2:'#007AFF'}",
+      "  animating={${3|true,false|}",
+      "  hidesWhenStopped={${4|true,false|}",
+      "  style={${5:styles.spinner}}",
+      "  testID=${6:'testID'}",
+      "/>"
+    ],
+    "description": "React Native ActivityIndicator component with all possible props"
+  },
+
+  "React Native ActivityIndicator (Basic Props)": {
+    "prefix": "_rnactivityindicatorbasic",
+    "body": [
+      "<ActivityIndicator",
+      "  size={${1|'small','large'|}",
+      "  color=${2:'#007AFF'}",
+      "/>"
+    ],
+    "description": "React Native ActivityIndicator component with basic props"
+  },
+  "React Native Modal (All Props)": {
+    "prefix": "_rnmodalall",
+    "body": [
+      "<Modal",
+      "  visible={${1:isVisible}}",
+      "  onRequestClose={${2:() => setIsVisible(false)}}",
+      "  animationType=${3|'none','slide','fade'|}",
+      "  transparent={${4|false,true|}}",
+      "  presentationStyle=${5|'fullScreen','pageSheet','formSheet','overFullScreen'|}",
+      "  supportedOrientations={${6:['portrait', 'landscape']}}",
+      "  onShow={${7:() => console.log('Modal shown')}}",
+      "  onDismiss={${8:() => console.log('Modal dismissed')}}",
+      "  hardwareAccelerated={${9|false,true|}}",
+      "  statusBarTranslucent={${10|false,true|}}",
+      ">",
+      "  <View style={${11:styles.modalContainer}}>",
+      "    ${12:Modal content here}",
+      "  </View>",
+      "</Modal>"
+    ],
+    "description": "React Native Modal component with all possible props"
+  },
+
+  "React Native Modal (Basic Props)": {
+    "prefix": "_rnmodalbasic",
+    "body": [
+      "<Modal",
+      "  visible={${1:isVisible}}",
+      "  onRequestClose={${2:() => setIsVisible(false)}}",
+      "  animationType='slide'",
+      "  transparent={true}",
+      ">",
+      "  <View style={${3:styles.modalContainer}}>",
+      "    ${4:Modal content here}",
+      "  </View>",
+      "</Modal>"
+    ],
+    "description": "React Native Modal component with basic props"
+  },
+
+  "React Native Switch (All Props)": {
+    "prefix": "_rnswitchall",
+    "body": [
+      "<Switch",
+      "  value={${1:isEnabled}}",
+      "  onValueChange={${2:() => setIsEnabled(previousState => !previousState)}}",
+      "  disabled={${3|false,true|}}",
+      "  trackColor={{ false: ${4:'#767577'}, true: ${5:'#81b0ff'} }}",
+      "  thumbColor={${1:isEnabled} ? ${6:'#f5dd4b'} : ${7:'#f4f3f4'}}",
+      "  ios_backgroundColor=${8:'#3e3e3e'}",
+      "  style={${9:styles.switch}}",
+      "  testID=${10:'switchTestID'}",
+      "/>"
+    ],
+    "description": "React Native Switch component with all possible props"
+  },
+
+  "React Native Switch (Basic Props)": {
+    "prefix": "_rnswitchbasic",
+    "body": [
+      "<Switch",
+      "  value={${1:isEnabled}}",
+      "  onValueChange={${2:() => setIsEnabled(previousState => !previousState)}}",
+      "/>"
+    ],
+    "description": "React Native Switch component with basic props"
+  },
+  "Expo Camera (All Props)": {
+    "prefix": "_expocameraall",
+    "body": [
+      "import { Camera, CameraType } from 'expo-camera';",
+      "",
+      "<Camera",
+      "  style={${1:styles.camera}}",
+      "  type={${2:CameraType.back}}",
+      "  flashMode={${3|Camera.Constants.FlashMode.off,Camera.Constants.FlashMode.on,Camera.Constants.FlashMode.auto,Camera.Constants.FlashMode.torch|}}",
+      "  autoFocus={${4|Camera.Constants.AutoFocus.on,Camera.Constants.AutoFocus.off|}}",
+      "  zoom={${5:0}}",
+      "  whiteBalance={${6|Camera.Constants.WhiteBalance.auto,Camera.Constants.WhiteBalance.sunny,Camera.Constants.WhiteBalance.cloudy,Camera.Constants.WhiteBalance.shadow,Camera.Constants.WhiteBalance.fluorescent,Camera.Constants.WhiteBalance.incandescent|}}",
+      "  ratio={${7:'16:9'}}",
+      "  pictureSize={${8:'1280x720'}}",
+      "  onCameraReady={${9:() => console.log('Camera ready')}}",
+      "  onMountError={${10:(error) => console.log('Camera error:', error)}}",
+      "  onBarCodeScanned={${11:(data) => console.log('Barcode scanned:', data)}}",
+      "  onFacesDetected={${12:(faces) => console.log('Faces detected:', faces)}}",
+      "  barCodeScannerSettings={{",
+      "    barCodeTypes: [Camera.Constants.BarCodeType.qr],",
+      "  }}",
+      "  faceDetectorSettings={{",
+      "    mode: Camera.Constants.FaceDetector.Mode.fast,",
+      "    detectLandmarks: Camera.Constants.FaceDetector.Landmarks.all,",
+      "    runClassifications: Camera.Constants.FaceDetector.Classifications.all,",
+      "    minDetectionInterval: 100,",
+      "    tracking: true,",
+      "  }}",
+      ">",
+      "  ${13:Camera content here}",
+      "</Camera>"
+    ],
+    "description": "Expo Camera component with all possible props"
+  },
+
+  "Expo Camera (Basic Props)": {
+    "prefix": "_expocamerabasic",
+    "body": [
+      "import { Camera, CameraType } from 'expo-camera';",
+      "",
+      "<Camera",
+      "  style={${1:styles.camera}}",
+      "  type={${2:CameraType.back}}",
+      ">",
+      "  ${3:Camera content here}",
+      "</Camera>"
+    ],
+    "description": "Expo Camera component with basic props"
+  },
+  "Expo MapView (All Props)": {
+    "prefix": "_expomapviewall",
+    "body": [
+      "import MapView, { Marker } from 'react-native-maps';",
+      "",
+      "<MapView",
+      "  style={${1:styles.map}}",
+      "  initialRegion={{",
+      "    latitude: ${2:37.78825},",
+      "    longitude: ${3:-122.4324},",
+      "    latitudeDelta: ${4:0.0922},",
+      "    longitudeDelta: ${5:0.0421},",
+      "  }}",
+      "  mapType={${6|'standard','satellite','hybrid','terrain'|}}",
+      "  showsUserLocation={${7|false,true|}}",
+      "  showsMyLocationButton={${8|false,true|}}",
+      "  showsCompass={${9|true,false|}}",
+      "  showsScale={${10|false,true|}}",
+      "  showsBuildings={${11|true,false|}}",
+      "  showsTraffic={${12|false,true|}}",
+      "  showsIndoors={${13|true,false|}}",
+      "  zoomEnabled={${14|true,false|}}",
+      "  zoomControlEnabled={${15|false,true|}}",
+      "  rotateEnabled={${16|true,false|}}",
+      "  scrollEnabled={${17|true,false|}}",
+      "  pitchEnabled={${18|true,false|}}",
+      "  toolbarEnabled={${19|true,false|}}",
+      "  loadingEnabled={${20|false,true|}}",
+      "  moveOnMarkerPress={${21|true,false|}}",
+      "  onRegionChange={${22:(region) => console.log('Region changed:', region)}}",
+      "  onPress={${23:(e) => console.log('Map pressed:', e.nativeEvent.coordinate)}}",
+      ">",
+      "  <Marker",
+      "    coordinate={{ latitude: ${24:37.78825}, longitude: ${25:-122.4324} }}",
+      "    title=${26:'Marker Title'}",
+      "    description=${27:'Marker Description'}",
+      "  />",
+      "</MapView>"
+    ],
+    "description": "Expo MapView component with all possible props"
+  },
+
+  "Expo MapView (Basic Props)": {
+    "prefix": "_expomapviewbasic",
+    "body": [
+      "import MapView { Marker }from 'react-native-maps';",
+      "",
+      "<MapView",
+      "  style={${1:styles.map}}",
+      "  initialRegion={{",
+      "    latitude: ${2:37.78825},",
+      "    longitude: ${3:-122.4324},",
+      "    latitudeDelta: ${4:0.0922},",
+      "    longitudeDelta: ${5:0.0421},",
+      "  }}",
+      ">",
+      "  <Marker",
+      "    coordinate={{ latitude: ${24:37.78825}, longitude: ${25:-122.4324} }}",
+      "    title=${26:'Marker Title'}",
+      "    description=${27:'Marker Description'}",
+      "  />",
+      "</MapView>"
+    ],
+    "description": "Expo MapView component with basic props"
+  },
+
+  "Expo Notifications Setup (All Options)": {
+    "prefix": "_exponotificationssetupall",
+    "body": [
+      "import * as Notifications from 'expo-notifications';",
+      "",
+      "Notifications.setNotificationHandler({",
+      "  handleNotification: async () => ({",
+      "    shouldShowAlert: true,",
+      "    shouldPlaySound: true,",
+      "    shouldSetBadge: false,",
+      "  }),",
+      "});",
+      "",
+      "// Configure notifications",
+      "await Notifications.setNotificationChannelAsync('default', {",
+      "  name: 'default',",
+      "  importance: Notifications.AndroidImportance.MAX,",
+      "  vibrationPattern: [0, 250, 250, 250],",
+      "  lightColor: '#FF231F7C',",
+      "});"
+    ],
+    "description": "Setup Expo Notifications with all options"
+  },
+
+  "Expo Notifications Schedule (All Props)": {
+    "prefix": "_exponotificationsscheduleall",
+    "body": [
+      "await Notifications.scheduleNotificationAsync({",
+      "  content: {",
+      "    title: ${1:'Notification Title'},",
+      "    body: ${2:'Notification Body'},",
+      "    data: { ${3:data: 'goes here'} },",
+      "    sound: ${4:true},",
+      "    badge: ${5:1},",
+      "    subtitle: ${6:'Subtitle'},",
+      "    categoryIdentifier: ${7:'identifier'},",
+      "  },",
+      "  trigger: {",
+      "    seconds: ${8:60},",
+      "    repeats: ${9|false,true|},",
+      "    channelId: ${10:'default'},",
+      "  },",
+      "});"
+    ],
+    "description": "Schedule an Expo Notification with all possible props"
+  },
+
+  "Expo Notifications Schedule (Basic Props)": {
+    "prefix": "_exponotificationsschedulebasic",
+    "body": [
+      "await Notifications.scheduleNotificationAsync({",
+      "  content: {",
+      "    title: ${1:'Notification Title'},",
+      "    body: ${2:'Notification Body'},",
+      "  },",
+      "  trigger: { seconds: ${3:60} },",
+      "});"
+    ],
+    "description": "Schedule an Expo Notification with basic props"
+  },
+
+  "Expo Notifications Request Permissions (All Options)": {
+    "prefix": "_exponotificationspermissionsall",
+    "body": [
+      "async function requestNotificationPermissions() {",
+      "  const { status: existingStatus } = await Notifications.getPermissionsAsync();",
+      "  let finalStatus = existingStatus;",
+      "  if (existingStatus !== 'granted') {",
+      "    const { status } = await Notifications.requestPermissionsAsync({",
+      "      ios: {",
+      "        allowAlert: true,",
+      "        allowBadge: true,",
+      "        allowSound: true,",
+      "        allowAnnouncements: true,",
+      "      },",
+      "    });",
+      "    finalStatus = status;",
+      "  }",
+      "  if (finalStatus !== 'granted') {",
+      "    alert('Failed to get push token for push notification!');",
+      "    return;",
+      "  }",
+      "  const token = (await Notifications.getExpoPushTokenAsync()).data;",
+      "  console.log(token);",
+      "  return token;",
+      "}"
+    ],
+    "description": "Request Expo Notifications permissions with all options"
+  },
+
+  "Expo Notifications Request Permissions (Basic)": {
+    "prefix": "_exponotificationspermissionsbasic",
+    "body": [
+      "async function requestNotificationPermissions() {",
+      "  const { status } = await Notifications.requestPermissionsAsync();",
+      "  if (status !== 'granted') {",
+      "    alert('Notification permissions not granted');",
+      "    return;",
+      "  }",
+      "  return status;",
+      "}"
+    ],
+    "description": "Request Expo Notifications permissions (basic version)"
+  },
+
+  "Expo Notifications Add Listener": {
+    "prefix": "_exponotificationsaddlistener",
+    "body": [
+      "useEffect(() => {",
+      "  const subscription = Notifications.addNotificationReceivedListener(notification => {",
+      "    console.log('Notification received:', notification);",
+      "  });",
+      "  return () => subscription.remove();",
+      "}, []);"
+    ],
+    "description": "Add an Expo Notifications listener"
+  },
+  "Expo Location (All Props)": {
+    "prefix": "_expolocationall",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "const location = await Location.getCurrentPositionAsync({",
+      "  accuracy: ${1|Location.Accuracy.Highest,Location.Accuracy.High,Location.Accuracy.Balanced,Location.Accuracy.Low,Location.Accuracy.Lowest|},",
+      "  enableHighAccuracy: ${2|true,false|},",
+      "  timeInterval: ${3:5000},",
+      "  distanceInterval: ${4:10},",
+      "  mayShowUserSettingsDialog: ${5|true,false|},",
+      "});",
+      "",
+      "console.log('Location:', location);"
+    ],
+    "description": "Expo Location getCurrentPositionAsync with all possible props"
+  },
+
+  "Expo Location (Basic Props)": {
+    "prefix": "_expolocationbasic",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "const location = await Location.getCurrentPositionAsync({});",
+      "console.log('Location:', location);"
+    ],
+    "description": "Expo Location getCurrentPositionAsync with basic usage"
+  },
+
+  "Expo Location Permissions (All Options)": {
+    "prefix": "_expolocationpermissionsall",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "async function requestLocationPermissions() {",
+      "  const { status: foregroundStatus } = await Location.requestForegroundPermissionsAsync();",
+      "  if (foregroundStatus !== 'granted') {",
+      "    console.log('Foreground location permission denied');",
+      "    return;",
+      "  }",
+      "",
+      "  const { status: backgroundStatus } = await Location.requestBackgroundPermissionsAsync();",
+      "  if (backgroundStatus !== 'granted') {",
+      "    console.log('Background location permission denied');",
+      "  }",
+      "",
+      "  return { foregroundStatus, backgroundStatus };",
+      "}"
+    ],
+    "description": "Request Expo Location permissions with all options"
+  },
+
+  "Expo Location Permissions (Basic)": {
+    "prefix": "_expolocationpermissionsbasic",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "async function requestLocationPermission() {",
+      "  const { status } = await Location.requestForegroundPermissionsAsync();",
+      "  if (status !== 'granted') {",
+      "    console.log('Location permission denied');",
+      "    return false;",
+      "  }",
+      "  return true;",
+      "}"
+    ],
+    "description": "Request Expo Location permissions (basic version)"
+  },
+
+  "Expo Location Watch Position (All Props)": {
+    "prefix": "_expolocationwatchall",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "const locationSubscription = await Location.watchPositionAsync(",
+      "  {",
+      "    accuracy: ${1|Location.Accuracy.Highest,Location.Accuracy.High,Location.Accuracy.Balanced,Location.Accuracy.Low,Location.Accuracy.Lowest|},",
+      "    timeInterval: ${2:1000},",
+      "    distanceInterval: ${3:1},",
+      "    mayShowUserSettingsDialog: ${4|true,false|},",
+      "  },",
+      "  (location) => {",
+      "    console.log('New location:', location);",
+      "    ${5:// Handle location update}",
+      "  }",
+      ");",
+      "",
+      "// Don't forget to remove the subscription when no longer needed:",
+      "// locationSubscription.remove();"
+    ],
+    "description": "Expo Location watchPositionAsync with all possible props"
+  },
+
+  "Expo Location Watch Position (Basic Props)": {
+    "prefix": "_expolocationwatchbasic",
+    "body": [
+      "import * as Location from 'expo-location';",
+      "",
+      "const locationSubscription = await Location.watchPositionAsync(",
+      "  { timeInterval: 1000, distanceInterval: 1 },",
+      "  (location) => {",
+      "    console.log('New location:', location);",
+      "    ${1:// Handle location update}",
+      "  }",
+      ");",
+      "",
+      "// Don't forget to remove the subscription when no longer needed:",
+      "// locationSubscription.remove();"
+    ],
+    "description": "Expo Location watchPositionAsync with basic props"
+  },
+  "Expo FileSystem Read File (All Props)": {
+    "prefix": "_expofsreadall",
+    "body": [
+      "import * as FileSystem from 'expo-file-system';",
+      "",
+      "try {",
+      "  const fileContent = await FileSystem.readAsStringAsync(FileSystem.documentDirectory + '${1:fileName.txt}', {",
+      "    encoding: ${2|FileSystem.EncodingType.UTF8,FileSystem.EncodingType.Base64|},",
+      "    position: ${3:0},",
+      "    length: ${4:1024},",
+      "  });",
+      "  console.log('File content:', fileContent);",
+      "} catch (error) {",
+      "  console.error('Error reading file:', error);",
+      "}"
+    ],
+    "description": "Expo FileSystem readAsStringAsync with all possible props"
+  },
+
+  "Expo FileSystem Read File (Basic Props)": {
+    "prefix": "_expofsreadbasic",
+    "body": [
+      "import * as FileSystem from 'expo-file-system';",
+      "",
+      "try {",
+      "  const fileContent = await FileSystem.readAsStringAsync(FileSystem.documentDirectory + '${1:fileName.txt}');",
+      "  console.log('File content:', fileContent);",
+      "} catch (error) {",
+      "  console.error('Error reading file:', error);",
+      "}"
+    ],
+    "description": "Expo FileSystem readAsStringAsync with basic usage"
+  },
+
+  "Expo FileSystem Write File (All Props)": {
+    "prefix": "_expofswriteall",
+    "body": [
+      "import * as FileSystem from 'expo-file-system';",
+      "",
+      "try {",
+      "  await FileSystem.writeAsStringAsync(FileSystem.documentDirectory + '${1:fileName.txt}', '${2:File content}', {",
+      "    encoding: ${3|FileSystem.EncodingType.UTF8,FileSystem.EncodingType.Base64|},",
+      "    append: ${4|false,true|},",
+      "  });",
+      "  console.log('File written successfully');",
+      "} catch (error) {",
+      "  console.error('Error writing file:', error);",
+      "}"
+    ],
+    "description": "Expo FileSystem writeAsStringAsync with all possible props"
+  },
+
+  "Expo FileSystem Write File (Basic Props)": {
+    "prefix": "_expofswritebasic",
+    "body": [
+      "import * as FileSystem from 'expo-file-system';",
+      "",
+      "try {",
+      "  await FileSystem.writeAsStringAsync(FileSystem.documentDirectory + '${1:fileName.txt}', '${2:File content}');",
+      "  console.log('File written successfully');",
+      "} catch (error) {",
+      "  console.error('Error writing file:', error);",
+      "}"
+    ],
+    "description": "Expo FileSystem writeAsStringAsync with basic usage"
+  },
+
+  "Expo SecureStore Set Item (All Props)": {
+    "prefix": "_exposecurestoresetall",
+    "body": [
+      "import * as SecureStore from 'expo-secure-store';",
+      "",
+      "try {",
+      "  await SecureStore.setItemAsync('${1:key}', '${2:value}', {",
+      "    keychainService: ${3:'myKeychain'},",
+      "    keychainAccessible: ${4|SecureStore.WHEN_UNLOCKED,SecureStore.AFTER_FIRST_UNLOCK,SecureStore.ALWAYS,SecureStore.WHEN_UNLOCKED_THIS_DEVICE_ONLY,SecureStore.WHEN_PASSCODE_SET_THIS_DEVICE_ONLY,SecureStore.AFTER_FIRST_UNLOCK_THIS_DEVICE_ONLY,SecureStore.ALWAYS_THIS_DEVICE_ONLY|},",
+      "  });",
+      "  console.log('Value stored successfully');",
+      "} catch (error) {",
+      "  console.error('Error storing value:', error);",
+      "}"
+    ],
+    "description": "Expo SecureStore setItemAsync with all possible props"
+  },
+
+  "Expo SecureStore Set Item (Basic Props)": {
+    "prefix": "_exposecurestoresetbasic",
+    "body": [
+      "import * as SecureStore from 'expo-secure-store';",
+      "",
+      "try {",
+      "  await SecureStore.setItemAsync('${1:key}', '${2:value}');",
+      "  console.log('Value stored successfully');",
+      "} catch (error) {",
+      "  console.error('Error storing value:', error);",
+      "}"
+    ],
+    "description": "Expo SecureStore setItemAsync with basic usage"
+  },
+
+  "Expo SecureStore Get Item (All Props)": {
+    "prefix": "_exposecurestoregetall",
+    "body": [
+      "import * as SecureStore from 'expo-secure-store';",
+      "",
+      "try {",
+      "  const value = await SecureStore.getItemAsync('${1:key}', {",
+      "    keychainService: ${2:'myKeychain'},",
+      "  });",
+      "  console.log('Retrieved value:', value);",
+      "} catch (error) {",
+      "  console.error('Error retrieving value:', error);",
+      "}"
+    ],
+    "description": "Expo SecureStore getItemAsync with all possible props"
+  },
+
+  "Expo SecureStore Get Item (Basic Props)": {
+    "prefix": "_exposecurestoregetbasic",
+    "body": [
+      "import * as SecureStore from 'expo-secure-store';",
+      "",
+      "try {",
+      "  const value = await SecureStore.getItemAsync('${1:key}');",
+      "  console.log('Retrieved value:', value);",
+      "} catch (error) {",
+      "  console.error('Error retrieving value:', error);",
+      "}"
+    ],
+    "description": "Expo SecureStore getItemAsync with basic usage"
+  },
+  "Expo Router Stack with Full Options": {
+    "prefix": "_exporouterstackfulloptions",
+    "body": [
+      "// Make sure you have the following dependencies",
+      "// npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar",
+      "import { Stack } from 'expo-router';",
+      "import { Button } from 'react-native';",
+      "",
+      "export default function Layout() {",
+      "  return (",
+      "    <Stack",
+      "      screenOptions={{",
+      "        // Appearance",
+      "        headerStyle: { backgroundColor: '#f4511e' },",
+      "        headerTintColor: '#fff',",
+      "        headerTitleStyle: { fontWeight: 'bold' },",
+      "        contentStyle: { backgroundColor: '#f0f0f0' },",
+      "",
+      "        // Header config",
+      "        headerShown: true,",
+      "        headerTransparent: false,",
+      "        headerTitle: props => <LogoTitle {...props} />,",
+      "        headerRight: () => (",
+      "          <Button onPress={() => {}} title=\"Info\" color=\"#fff\" />",
+      "        ),",
+      "        headerLeft: () => (",
+      "          <Button onPress={() => {}} title=\"Back\" color=\"#fff\" />",
+      "        ),",
+      "",
+      "        // Behavior",
+      "        gestureEnabled: true,",
+      "        animationEnabled: true,",
+      "        presentation: 'card', // 'modal' | 'transparentModal' | 'containedModal' | 'containedTransparentModal' | 'fullScreenModal' | 'formSheet'",
+      "",
+      "        // Status bar",
+      "        statusBarStyle: 'auto', // 'inverted' | 'auto' | 'light' | 'dark'",
+      "        statusBarColor: '#f4511e',",
+      "        statusBarAnimation: 'fade', // 'none' | 'fade' | 'slide'",
+      "        statusBarHidden: false,",
+      "",
+      "        // Orientation",
+      "        orientation: 'default', // 'portrait' | 'portrait_up' | 'portrait_down' | 'landscape' | 'landscape_left' | 'landscape_right'",
+      "",
+      "        // Animation",
+      "        animationTypeForReplace: 'push', // 'push' | 'pop'",
+      "        gestureDirection: 'horizontal', // 'horizontal' | 'vertical' | 'horizontal-inverted' | 'vertical-inverted'",
+      "",
+      "        // Misc",
+      "        freezeOnBlur: false,",
+      "        autoHideHomeIndicator: false,",
+      "      }}",
+      "    >",
+      "      <Stack.Screen",
+      "        name=\"index\"",
+      "        options={{",
+      "          // All screenOptions can be overridden here",
+      "          title: 'Home',",
+      "          headerLargeTitle: true, // iOS only",
+      "          headerLargeTitleStyle: { fontWeight: 'bold' },",
+      "          headerSearchBarOptions: { // iOS only",
+      "            placeholder: 'Search',",
+      "          },",
+      "",
+      "          // Additional options",
+      "          headerBackTitle: 'Back',",
+      "          headerBackVisible: true,",
+      "          headerTruncatedBackTitle: 'Back',",
+      "",
+      "          cardStyle: { backgroundColor: '#fff' },",
+      "          cardOverlayEnabled: true,",
+      "          cardShadowEnabled: true,",
+      "",
+      "          gestureResponseDistance: 50,",
+      "",
+      "          transitionSpec: {",
+      "            open: {",
+      "              animation: 'spring',",
+      "              config: {",
+      "                stiffness: 1000,",
+      "                damping: 500,",
+      "                mass: 3,",
+      "                overshootClamping: true,",
+      "                restDisplacementThreshold: 0.01,",
+      "                restSpeedThreshold: 0.01,",
+      "              },",
+      "            },",
+      "            close: {",
+      "              animation: 'spring',",
+      "              config: {",
+      "                stiffness: 1000,",
+      "                damping: 500,",
+      "                mass: 3,",
+      "                overshootClamping: true,",
+      "                restDisplacementThreshold: 0.01,",
+      "                restSpeedThreshold: 0.01,",
+      "              },",
+      "            },",
+      "          },",
+      "        }}",
+      "      />",
+      "    </Stack>",
+      "  );",
+      "}"
+    ],
+    "description": "Expo Router Stack with full screenOptions and Stack.Screen options"
+  }
+}
