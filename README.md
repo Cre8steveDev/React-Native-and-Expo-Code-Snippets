@@ -10,7 +10,7 @@ If like me, you like to see what's possible with any component you're using to b
 
 ## Usage
 
-![Usage Animation](https://files.fm/f/eb3wvw96br)
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s2i31rj782y0uz8699q1.gif)
 
 ## Requirements
 
