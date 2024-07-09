@@ -20,7 +20,6 @@ For React Native and Expo App Development.
 
 - Stephen Omoregie
 - Twitter: _@Cre8steveDev_
-- Email: [mailto:cre8stevedev@gmail.com](cre8stevedev@gmail.com)
 
 ## Available Commands
 
