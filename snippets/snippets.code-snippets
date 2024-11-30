@@ -18,6 +18,24 @@
     "description": "Creates a React Native functional component"
   },
 
+  "React Native Functional Component Excluding React Import": {
+    "prefix": "_rnfce,
+    "body": [
+      "import { View, Text } from 'react-native';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <View>",
+      "      <Text>${2:Hello, World!}</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Creates a React Native functional component Excluding React Import"
+  },
+
   "Expo StatusBar": {
     "prefix": "_expostatusbar",
     "body": [

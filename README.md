@@ -24,6 +24,7 @@ For React Native and Expo App Development.
 ## Available Commands
 
 - `rnfc` : React Native Functional Component
+- `rnfce` : React Native Functional Component Excluding React Import
 - `expostatusbar` : Expo StatusBar
 - `rnstyle` : React Native StyleSheet
 - `rnflatlistall` : React Native FlatList (All Props)
