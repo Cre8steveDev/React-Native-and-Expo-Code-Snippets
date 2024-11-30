@@ -33,7 +33,7 @@
       "",
       "export default ${1:ComponentName};"
     ],
-    "description": "Creates a React Native functional component"
+    "description": "Creates a React Native functional component Excluding React Import"
   },
 
   "Expo StatusBar": {
